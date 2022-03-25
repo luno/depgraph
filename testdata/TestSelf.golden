@@ -1,0 +1,91 @@
+[
+  {
+    "Name": "github.com/luno/depgraph",
+    "Children": [
+      {
+        "Name": "bufio",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "github.com/luno/jettison/errors",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "github.com/luno/jettison/j",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "go/build/constraint",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "os",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "path/filepath",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "sort",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "strings",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "sync",
+        "Height": 0,
+        "Parents": 1
+      }
+    ],
+    "Descendants": {
+      "bufio": true,
+      "github.com/luno/jettison/errors": true,
+      "github.com/luno/jettison/j": true,
+      "go/build/constraint": true,
+      "os": true,
+      "path/filepath": true,
+      "sort": true,
+      "strings": true,
+      "sync": true
+    },
+    "FileImports": {
+      "depgraph.go": [
+        "github.com/luno/jettison/errors",
+        "github.com/luno/jettison/j"
+      ],
+      "gofile.go": [
+        "bufio",
+        "go/build/constraint",
+        "os",
+        "path/filepath",
+        "strings",
+        "github.com/luno/jettison/errors",
+        "github.com/luno/jettison/j"
+      ],
+      "graph.go": [
+        "path/filepath",
+        "sort",
+        "sync",
+        "github.com/luno/jettison/errors",
+        "github.com/luno/jettison/j"
+      ],
+      "mod.go": [
+        "path/filepath",
+        "strings"
+      ]
+    },
+    "Height": 0,
+    "Parents": 0
+  }
+]

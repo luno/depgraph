@@ -1,0 +1,92 @@
+[
+  {
+    "Name": "github.com/luno/depgraph",
+    "Children": [
+      {
+        "Name": "github.com/luno/depgraph/testdata/childa",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "github.com/luno/depgraph/testdata/childb",
+        "Height": 0,
+        "Parents": 2
+      }
+    ],
+    "Descendants": {
+      "github.com/luno/depgraph/testdata/childa": true,
+      "github.com/luno/depgraph/testdata/childb": true
+    },
+    "FileImports": {
+      "root.go": [
+        "github.com/luno/depgraph/testdata/childa",
+        "github.com/luno/depgraph/testdata/childb"
+      ]
+    },
+    "Height": 1,
+    "Parents": 0
+  },
+  {
+    "Name": "github.com/luno/depgraph/childa",
+    "Children": [
+      {
+        "Name": "fmt",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "github.com/luno/depgraph/testdata/childb",
+        "Height": 0,
+        "Parents": 2
+      },
+      {
+        "Name": "github.com/luno/jettison/errors",
+        "Height": 0,
+        "Parents": 1
+      }
+    ],
+    "Descendants": {
+      "fmt": true,
+      "github.com/luno/depgraph/testdata/childb": true,
+      "github.com/luno/jettison/errors": true
+    },
+    "FileImports": {
+      "childa/childa.go": [
+        "fmt",
+        "github.com/luno/depgraph/testdata/childb",
+        "github.com/luno/jettison/errors"
+      ]
+    },
+    "Height": 1,
+    "Parents": 0
+  },
+  {
+    "Name": "github.com/luno/depgraph/childb",
+    "Children": [
+      {
+        "Name": "os",
+        "Height": 0,
+        "Parents": 1
+      },
+      {
+        "Name": "reflect",
+        "Height": 0,
+        "Parents": 1
+      }
+    ],
+    "Descendants": {
+      "os": true,
+      "reflect": true
+    },
+    "FileImports": {
+      "childb/childb.go": [
+        "os"
+      ],
+      "childb/tag.go": [
+        "reflect"
+      ]
+    },
+    "Height": 0,
+    "Parents": 0
+  }
+]
