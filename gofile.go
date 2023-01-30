@@ -42,7 +42,7 @@ func getGoImports(file string, tags map[string]bool) ([]string, bool, error) {
 	var (
 		res          []string
 		imports      bool
-		singelImport bool
+		singleImport bool
 		seenPkg      bool
 	)
 	for scanner.Scan() {
@@ -68,7 +68,7 @@ func getGoImports(file string, tags map[string]bool) ([]string, bool, error) {
 			continue
 		} else if strings.HasPrefix(line, "import \"") {
 			imports = true
-			singelImport = true
+			singleImport = true
 		}
 
 		if !imports {
@@ -82,13 +82,22 @@ func getGoImports(file string, tags map[string]bool) ([]string, bool, error) {
 		if line == "" {
 			continue
 		}
+		// Handle line comments
+		if strings.HasPrefix(line, "//") {
+			continue
+		}
+		// Handle block comments (only the simple case)
+		if strings.HasPrefix(line, "/*") && strings.HasSuffix(line, "*/") {
+			continue
+		}
+
 		if strings.Contains(line, " \"") {
 			// Import aliased
 			line = strings.Split(line, " ")[1]
 		}
 		res = append(res, strings.Trim(line, "\""))
 
-		if singelImport {
+		if singleImport {
 			break
 		}
 	}
