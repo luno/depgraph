@@ -9,19 +9,3 @@ DepGraph is a package to figure out an efficient dependency tree for a Go packag
 The dependency graph is built by inspecting file imports only, which is faster than `go list`, or ast parsing.
 
 It can be used to figure out why a particular package is imported into a service.
-
-## Example
-
-Why does service A import service B?
-
-```shell
-depgraph src/serviceA src/serviceB
-```
-
-```
-src/serviceA
-└── src/fe/api/base
-    └── src/fe/api/pkg
-        └── src/fe/pkg
-            └── src/serviceB
-```
