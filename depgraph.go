@@ -1,6 +1,6 @@
 // Package depgraph provides an efficient golang dependency analysis
 // tool for large modules. It builds the graph by inspecting file
-// imports only which is faster than go list or ast parsing.
+// imports only, which is faster than go list or ast parsing.
 package depgraph
 
 import (
