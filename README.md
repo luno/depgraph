@@ -11,9 +11,37 @@
 [![GoDoc](https://godoc.org/github.com/luno/depgraph?status.png)](https://godoc.org/github.com/luno/depgraph)
 
 
-
 DepGraph is a package to figure out an efficient dependency tree for a Go package.
 
-The dependency graph is built by inspecting file imports only, which is faster than `go list`, or ast parsing.
+The dependency graph is built by inspecting file imports only, which is faster than `go list`, or AST parsing.
 
 It can be used to figure out why a particular package is imported into a service.
+
+Examples
+1. Why is `modulename/currency` imported in `modulename/services/fe`?
+```shell
+depgraph modulename/services/fe modulename/currency
+```
+```
+modulename/services/fe
+└── modulename/locale/allstrings
+    └── modulename/locale
+        └── modulename/currency
+```
+
+2. Which apps is `modulename/services/withdrawals/ops` imported in?
+```shell
+depgraph modulename/services/withdrawals/ops
+```
+```
+modulename/services/fe/website/modulename_website
+└── modulename/services/fe/website
+    └── modulename/services/fe/api/base
+        └── modulename/services/withdrawals/ops/send
+            └── modulename/services/withdrawals/ops
+
+modulename/services/withdrawals/withdrawals
+└── modulename/services/withdrawals/state
+    └── modulename/services/withdrawals/client/logical
+        └── modulename/services/withdrawals/ops
+```
