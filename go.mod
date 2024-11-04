@@ -5,7 +5,7 @@ go 1.17
 require (
 	github.com/luno/jettison v0.0.0-20220222115749-b4f292a39192
 	github.com/sebdah/goldie/v2 v2.5.3
-	github.com/stretchr/testify v1.7.1
+	github.com/stretchr/testify v1.9.0
 )
 
 require (
