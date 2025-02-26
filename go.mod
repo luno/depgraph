@@ -7,7 +7,7 @@ toolchain go1.23.2
 require (
 	github.com/luno/jettison v0.0.0-20241003145233-25be6c50d0ec
 	github.com/sebdah/goldie/v2 v2.5.5
-	github.com/stretchr/testify v1.9.0
+	github.com/stretchr/testify v1.10.0
 )
 
 require (
