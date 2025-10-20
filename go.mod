@@ -4,7 +4,7 @@ go 1.24.3
 
 require (
 	github.com/luno/jettison v0.0.0-20250922172348-1bcbb9f4536b
-	github.com/sebdah/goldie/v2 v2.7.1
+	github.com/sebdah/goldie/v2 v2.8.0
 	github.com/stretchr/testify v1.11.1
 )
 
