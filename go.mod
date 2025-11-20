@@ -1,6 +1,6 @@
 module github.com/luno/depgraph
 
-go 1.24.3
+go 1.25
 
 require (
 	github.com/luno/jettison v0.0.0-20251004142841-a8f926feeafb
