@@ -3,7 +3,7 @@ module github.com/luno/depgraph
 go 1.25
 
 require (
-	github.com/luno/jettison v0.0.0-20260131114948-c2f7d19a7786
+	github.com/luno/jettison v0.0.0-20260204095351-d930f4b24a4f
 	github.com/sebdah/goldie/v2 v2.8.0
 	github.com/stretchr/testify v1.11.1
 )
@@ -16,7 +16,7 @@ require (
 	github.com/mattn/go-isatty v0.0.20 // indirect
 	github.com/pmezard/go-difflib v1.0.0 // indirect
 	github.com/sergi/go-diff v1.2.0 // indirect
-	golang.org/x/sys v0.37.0 // indirect
+	golang.org/x/sys v0.38.0 // indirect
 	golang.org/x/xerrors v0.0.0-20240903120638-7835f813f4da // indirect
 	gopkg.in/yaml.v3 v3.0.1 // indirect
 )
