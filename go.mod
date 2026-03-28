@@ -3,7 +3,7 @@ module github.com/luno/depgraph
 go 1.25
 
 require (
-	github.com/luno/jettison v0.0.0-20260323123002-87b999fd9af1
+	github.com/luno/jettison v0.0.0-20260328151427-502b299c2358
 	github.com/sebdah/goldie/v2 v2.8.0
 	github.com/stretchr/testify v1.11.1
 )
